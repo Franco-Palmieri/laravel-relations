@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
 </head>
 <body>
-    @section('content')
-        @foreach($articles as $article)
-            <div>{{$article->title}}</div>
-        @endforeach
-    @endsection
+    <nav>
+        @include('news.nav')
+    </nav>
+    <header>
+        @include('news.header')
+    </header>
+    <div class="contenitore">
+        @yield('content')
+    </div>
+    <footer>
+        @include('news.footer')
+    </footer>
 </body>
 </html>
