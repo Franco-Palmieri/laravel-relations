@@ -26,7 +26,8 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('create');
+        $authors = Author::all();
+        return view('create', compact('authors'));
     }
 
     /**
@@ -37,7 +38,16 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'picture' => 'url'
+        ]);
+
+        $data = $request->all();
+
+        $article = new Article();
+        $this->saveAndFill($article, $data);
+
+        return redirect()->route('articles.show', $article->id);
     }
 
     /**
@@ -83,5 +93,15 @@ class NewsController extends Controller
     public function destroy($id)
     {
         //
+    }
+    //MY FUNCTIONS
+    private function saveAndFill($article, $data){
+
+        $article->title = $data['title'];
+        $article->body = $data['body'];
+        $article->picture = $data['picture'];
+
+        $article->author_id = $data['author_id'];
+        $article->save();
     }
 }
