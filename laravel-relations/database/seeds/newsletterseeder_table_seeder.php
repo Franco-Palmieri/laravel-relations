@@ -35,7 +35,7 @@ class newsletterseeder_table_seeder extends Seeder
             $articleObject->body = $faker->paragraph();
             $articleObject->picture = $faker->imageUrl(640, 480, 'post', true);
 
-            //
+            //Prendo id degli autori
             $randAuthorKey = array_rand($authorListId, 1);
             $authorID = $authorListId[$randAuthorKey];
             $articleObject->author_id = $authorID;
