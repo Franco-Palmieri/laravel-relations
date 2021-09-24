@@ -10,6 +10,6 @@ class Article extends Model
         return $this->belongsTo(Author::class);
     }
     public function tag(){
-        return belongsToMany(Tag::class);
+        return belongsToMany(Tags::class);
     }
 }

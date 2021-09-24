@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Author;
+use App\Tags;
 
 class NewsController extends Controller
 {
@@ -27,7 +28,8 @@ class NewsController extends Controller
     public function create()
     {
         $authors = Author::all();
-        return view('create', compact('authors'));
+        $tags = Tags::all();
+        return view('create', compact('authors', 'tags'));
     }
 
     /**
@@ -59,7 +61,7 @@ class NewsController extends Controller
     public function show($id)
     {
         $article = Article::find($id);
-        return view('articles.show', compact('article'));
+        return view('show', compact('article'));
     }
 
     /**
@@ -104,5 +106,10 @@ class NewsController extends Controller
 
         $article->author_id = $data['author_id'];
         $article->save();
+
+        foreach($data['tags'] as $tagId){
+            
+            $article->tags()->attach($tagId);
+        }
     }
 }

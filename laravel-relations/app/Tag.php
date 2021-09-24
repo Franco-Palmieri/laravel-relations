@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Tags extends Model
 {
     public function article(){
         return belongsToMany(Article::class);

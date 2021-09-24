@@ -15,6 +15,7 @@ class newsletterseeder_table_seeder extends Seeder
 
     public function run(Faker $faker)
     {
+        //Autori
         $authorListId = [];
 
         for($i = 0; $i < 20; $i++){
@@ -25,6 +26,17 @@ class newsletterseeder_table_seeder extends Seeder
             $author->save();
             $authorListId[]=$author->id;
         }
+        //Tags
+        $tagList = [
+            'sport',
+            'attualità',
+            'calcio',
+            'formula 1',
+            'intrattenimento',
+            'italia',
+            'europa'
+        ];
+
 
         for($x = 0; $x < 50; $x++){
 
@@ -40,7 +52,21 @@ class newsletterseeder_table_seeder extends Seeder
             $authorID = $authorListId[$randAuthorKey];
             $articleObject->author_id = $authorID;
 
+            //Prendo id dei tags
+            $randTagKey = array_rand($tagList, 5);
+            $tag1 = $tagList[$randomTagKey[0]];
+            $tag2 = $tagList[$randomTagKey[1]];
+            $tag3 = $tagList[$randomTagKey[2]];
+            $tag4 = $tagList[$randomTagKey[3]];
+            $tag5 = $tagList[$randomTagKey[4]];
+
             $articleObject->save();
+
+            $article->tags()->attach($tag1);
+            $article->tags()->attach($tag2);
+            $article->tags()->attach($tag3);
+            $article->tags()->attach($tag4);
+            $article->tags()->attach($tag5);
         }
     }
 }
