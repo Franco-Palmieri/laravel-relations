@@ -28,18 +28,17 @@ class newsletterseeder_table_seeder extends Seeder
             $authorListId[]=$author->id;
         }
         //Tags
-        $tagList = [
-            'sport',
-            'attualità',
-            'calcio',
-            'formula 1',
-            'intrattenimento',
-            'italia',
-            'europa'
-        ];
+        $tagList = [];
             for($i = 0; $i < 7; $i++){
                 $tag = new Tag();
-                $tag->name='mio tag';
+                $tag->name=[
+                'sport',
+                'attualità',
+                'calcio',
+                'formula 1',
+                'intrattenimento',
+                'italia',
+                'europa'];
                 $tag->save();
                 $tagsList[] = $tag->id;
             }
