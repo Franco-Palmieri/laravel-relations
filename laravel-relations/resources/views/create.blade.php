@@ -22,10 +22,10 @@
                         <select class="form-select" id="author_id" name="author_id">
                             <option selected>Choose...</option>
                             @foreach($authors as $author)
-                                <option value="{{$author->id}}">{{$author->name}}</option>
+                                <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div>-
                 </div>
                 
 

@@ -17,9 +17,9 @@ class newsletterseeder_table_seeder extends Seeder
     {
         $authorListId = [];
 
-        for($i = 0; $i < 50; $i++){
+        for($i = 0; $i < 20; $i++){
             $author = new Author();
-            $author->name = $faker->word(2, false);
+            $author->name = $faker->word();
             $author->surname = $faker->word();
             $author->picture = $faker->imageUrl(640, 480, 'post', true);
             $author->save();
@@ -31,7 +31,7 @@ class newsletterseeder_table_seeder extends Seeder
             //creo Article:
 
             $articleObject = new Article();
-            $articleObject->title = $faker->word(5, false);
+            $articleObject->title = $faker->words(5, true);
             $articleObject->body = $faker->paragraph();
             $articleObject->picture = $faker->imageUrl(640, 480, 'post', true);
 
