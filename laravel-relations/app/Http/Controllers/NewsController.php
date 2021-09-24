@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Author;
-use App\Tags;
+use App\Tag;
 
 class NewsController extends Controller
 {

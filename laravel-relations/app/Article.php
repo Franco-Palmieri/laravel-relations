@@ -9,7 +9,7 @@ class Article extends Model
     public function post(){
         return $this->belongsTo(Author::class);
     }
-    public function tag(){
-        return belongsToMany(Tags::class);
+    public function tags(){
+        return $this->belongsToMany(Tag::class);
     }
 }

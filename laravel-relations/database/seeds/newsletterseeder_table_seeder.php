@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Article;
 use App\Author;
+use App\Tag;
 use Faker\Generator as Faker;
 
 class newsletterseeder_table_seeder extends Seeder
@@ -54,19 +55,19 @@ class newsletterseeder_table_seeder extends Seeder
 
             //Prendo id dei tags
             $randTagKey = array_rand($tagList, 5);
-            $tag1 = $tagList[$randomTagKey[0]];
-            $tag2 = $tagList[$randomTagKey[1]];
-            $tag3 = $tagList[$randomTagKey[2]];
-            $tag4 = $tagList[$randomTagKey[3]];
-            $tag5 = $tagList[$randomTagKey[4]];
+            $tag1 = $tagList[$randTagKey[0]];
+            $tag2 = $tagList[$randTagKey[1]];
+            $tag3 = $tagList[$randTagKey[2]];
+            $tag4 = $tagList[$randTagKey[3]];
+            $tag5 = $tagList[$randTagKey[4]];
 
             $articleObject->save();
 
-            $article->tags()->attach($tag1);
-            $article->tags()->attach($tag2);
-            $article->tags()->attach($tag3);
-            $article->tags()->attach($tag4);
-            $article->tags()->attach($tag5);
+            $articleObject->tags()->attach($tag1);
+            $articleObject->tags()->attach($tag2);
+            $articleObject->tags()->attach($tag3);
+            $articleObject->tags()->attach($tag4);
+            $articleObject->tags()->attach($tag5);
         }
     }
 }
