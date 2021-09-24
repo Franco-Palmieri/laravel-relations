@@ -37,7 +37,12 @@ class newsletterseeder_table_seeder extends Seeder
             'italia',
             'europa'
         ];
-
+            for($i = 0; $i < 7; $i++){
+                $tag = new Tag();
+                $tag->name='mio tag';
+                $tag->save();
+                $tagsList[] = $tag->id;
+            }
 
         for($x = 0; $x < 50; $x++){
 
