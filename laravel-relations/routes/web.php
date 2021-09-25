@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('articles', NewsController::class);
 
+Route::resource('tag', TagsController::class);
+

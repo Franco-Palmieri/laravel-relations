@@ -12,9 +12,11 @@
                     <h5 class="show-title">{{$article->title}}</h5>
                     <p class="show-text">{{$article->body}}</p>
                     @foreach($article->tags as $tag)
+                    <a href="{{route('tag.show', $tag->id)}}">
                         <div class="chip">
                             {{$tag->name}}
                         </div>
+                    </a>
                     @endforeach
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>

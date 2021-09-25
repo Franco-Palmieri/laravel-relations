@@ -11002,6 +11002,11 @@ header .container .row .nav-bar .nav-rigth li {
   padding: 20px 0;
 }
 
+.show-box .show-info a {
+  text-decoration: none;
+  color: black;
+}
+
 .chip {
   display: inline-block;
   padding: 0 20px;
