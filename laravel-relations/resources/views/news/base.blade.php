@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
 </head>
 <body>
-    <nav>
-        @include('news.nav')
-    </nav>
-    <header>
-        @include('news.header')
-    </header>
-    <div class="contenitore">
-        @yield('content')
+    <div class="contenitore-base">
+        <header>
+            @include('news.header')
+        </header>
+        <div class="contenitore">
+            @yield('content')
+        </div>
+        <footer>
+            @include('news.footer')
+        </footer>
     </div>
-    <footer>
-        @include('news.footer')
-    </footer>
 </body>
 </html>

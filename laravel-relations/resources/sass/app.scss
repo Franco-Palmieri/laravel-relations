@@ -8,12 +8,16 @@
 @import '~bootstrap/scss/bootstrap';
 
 //My Style
-@import './style/nav';
-
+@import './style/header';
+@import './style/main';
+@import './style/tags';
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.contenitore-base{
+    background-color: rgb(162, 229, 255);
 }
 .news-card{
     margin: 20px 0;

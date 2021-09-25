@@ -1,0 +1,38 @@
+header{
+    .container{
+        .row{
+            .title{
+                text-align: center;
+                padding: 20px;
+                font-weight: bold;
+                color: white;                 
+            }
+            .nav-bar{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .nav-left, .nav-rigth{
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        li{
+                            margin: 0 10px;
+                        }
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+                .nav-rigth{
+                    justify-content: end;
+                    li{
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -25,12 +25,12 @@
                                 <option value="{{$author->id}}">{{$author->name}} {{$author->surname}}</option>
                             @endforeach
                         </select>
-                    </div>-
+                    </div>
                 </div>
                 <strong>Tags</strong>
                 @foreach($tags as $tag)
                 <div>
-                    <input type="checkbox" name="tags[]" value="{{$tag->id}}"><label>{{$tag->name}}</label>
+                    <input type="checkbox" name="tags[]" value="{{$tag->id}}"> <label>{{$tag->name}}</label>
                 </div>
                 @endforeach
                 <button type="submit" class="btn btn-primary">Submit</button>

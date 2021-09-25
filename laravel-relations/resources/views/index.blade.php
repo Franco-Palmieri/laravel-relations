@@ -4,16 +4,18 @@
     <div class="container">
         <div class="row">
             @foreach($articles as $article)
-                <div class="card-group col-3 news-card">
-                    <div class="card">
-                        <img class="card-img-top" src="{{$article->picture}}" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$article->title}}</h5>
-                            <p class="card-text">{{$article->body}}</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
+            <div class="col-12">
+                <div class="row news-box">
+                    <div class="col-6 news-img">
+                        <a href="{{route('articles.show', $article->id)}}"><img src="{{$article->picture}}" class="card-img-bottom" alt="Card image cap"></a>
+                    </div>
+                    <div class="col-6 news-info">
+                        <h5>{{$article->title}}</h5>
+                        <p>{{$article->body}}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
+            </div>
             @endforeach
         </div>
     </div>

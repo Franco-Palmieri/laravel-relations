@@ -28,7 +28,7 @@ class NewsController extends Controller
     public function create()
     {
         $authors = Author::all();
-        $tags = Tags::all();
+        $tags = Tag::all();
         return view('create', compact('authors', 'tags'));
     }
 

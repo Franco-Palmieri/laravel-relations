@@ -1,0 +1,15 @@
+.news-box{
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid rgb(235, 235, 235);
+}
+.show-box{
+    .show-img{
+        display: flex;
+        justify-content: center;
+    }
+    .show-info{
+        text-align: center;
+        padding: 20px 0;
+    }
+}
