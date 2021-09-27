@@ -10990,36 +10990,42 @@ header .container .row .nav-bar .nav-rigth li {
   margin: 0 10px;
 }
 
-.news-container .news-box {
+.news-box {
   align-items: center;
   padding: 20px;
 }
 
-.news-container .news-box .news-title {
+.news-box .news-title {
   font-weight: bold;
 }
 
-.news-container .show-box .show-img {
+.show-box .show-img {
   display: flex;
   justify-content: center;
 }
 
-.news-container .show-box .show-info {
+.show-box .show-info {
   text-align: center;
   padding: 20px 0;
 }
 
-.news-container .show-box .show-info a {
+.show-box .show-info a {
   text-decoration: none;
   color: black;
 }
 
-.news-container .show-box .show-info .show-title {
+.show-box .show-info .show-title {
   font-weight: bold;
 }
 
-.news-container .news-aside-container {
+.news-aside-container {
   border-left: 1px solid lightgray;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .chip {

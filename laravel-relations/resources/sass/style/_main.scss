@@ -1,5 +1,4 @@
-.news-container{
-   
+  
     .news-box{
         align-items: center;
         padding: 20px;
@@ -27,4 +26,8 @@
     .news-aside-container{
         border-left: 1px solid lightgray;
     }
-}
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
