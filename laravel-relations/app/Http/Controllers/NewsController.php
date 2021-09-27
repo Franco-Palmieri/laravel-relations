@@ -70,9 +70,11 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Article $article)
     {
-        //
+        $authors = Author::all();
+        $tags = Tag::all();
+        return view('edit', compact('article', 'authors', 'tags'));
     }
 
     /**
@@ -82,9 +84,10 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Article $article)
     {
-        //
+        $this->saveAndFill($article, $request);
+        return redirect()->route('articles.show', $article);
     }
 
     /**

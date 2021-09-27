@@ -10,6 +10,9 @@
         .show-img{
             display: flex;
             justify-content: center;
+            img{
+                width: 100%;
+            }
         }
         .show-info{
             text-align: center;

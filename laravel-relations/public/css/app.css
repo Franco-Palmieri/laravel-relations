@@ -11004,6 +11004,10 @@ header .container .row .nav-bar .nav-rigth li {
   justify-content: center;
 }
 
+.show-box .show-img img {
+  width: 100%;
+}
+
 .show-box .show-info {
   text-align: center;
   padding: 20px 0;

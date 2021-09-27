@@ -1,7 +1,7 @@
 @extends('news.base')
 
 @section('content')
-<div class="container">
+<div class="container news-container">
     <div class="row">
         <div class="col-12">
             <div class="row show-box">
@@ -20,6 +20,12 @@
                     </a>
                     @endforeach
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <div class="comment-box">
+                        <form action="" method="post">
+                        @csrf
+                            <input type="text">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
