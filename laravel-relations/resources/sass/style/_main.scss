@@ -1,25 +1,30 @@
-.news-box{
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid rgb(235, 235, 235);
-    .news-title{
-        font-weight: bold;
-    }
-}
-.show-box{
-    .show-img{
-        display: flex;
-        justify-content: center;
-    }
-    .show-info{
-        text-align: center;
-        padding: 20px 0;
-        a{
-            text-decoration: none;
-            color: black;
-        }
-        .show-title{
+.news-container{
+   
+    .news-box{
+        align-items: center;
+        padding: 20px;
+        .news-title{
             font-weight: bold;
         }
+    }
+    .show-box{
+        .show-img{
+            display: flex;
+            justify-content: center;
+        }
+        .show-info{
+            text-align: center;
+            padding: 20px 0;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .show-title{
+                font-weight: bold;
+            }
+        }
+    }
+    .news-aside-container{
+        border-left: 1px solid lightgray;
     }
 }

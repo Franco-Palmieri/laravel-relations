@@ -31,7 +31,11 @@ class newsletterseeder_table_seeder extends Seeder
         $listOfTags = [
             'sport',
             'world',
-            'cronaca'
+            'cronaca',
+            'attualità',
+            'calcio',
+            'italia',
+            'europa'
         ];
 
         $listOfTagID = [];

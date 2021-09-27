@@ -10943,14 +10943,14 @@ a.text-dark:focus {
 }
 
 header {
-  background-color: #94ddff;
+  background-color: #dbdbdb;
 }
 
 header .container .row .title {
   text-align: center;
   padding: 20px;
   font-weight: bold;
-  color: white;
+  color: #242424;
 }
 
 header .container .row .nav-bar {
@@ -10990,33 +10990,36 @@ header .container .row .nav-bar .nav-rigth li {
   margin: 0 10px;
 }
 
-.news-box {
+.news-container .news-box {
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #ebebeb;
 }
 
-.news-box .news-title {
+.news-container .news-box .news-title {
   font-weight: bold;
 }
 
-.show-box .show-img {
+.news-container .show-box .show-img {
   display: flex;
   justify-content: center;
 }
 
-.show-box .show-info {
+.news-container .show-box .show-info {
   text-align: center;
   padding: 20px 0;
 }
 
-.show-box .show-info a {
+.news-container .show-box .show-info a {
   text-decoration: none;
   color: black;
 }
 
-.show-box .show-info .show-title {
+.news-container .show-box .show-info .show-title {
   font-weight: bold;
+}
+
+.news-container .news-aside-container {
+  border-left: 1px solid lightgray;
 }
 
 .chip {
@@ -11035,12 +11038,13 @@ header .container .row .nav-bar .nav-rigth li {
 }
 
 .contenitore-base {
-  background-color: white;
+  background-color: #e0e0e0;
 }
 
 .news-container {
   margin-top: 50px;
   border: 1px solid lightgray;
+  background-color: white;
   padding: 10px;
 }
 
