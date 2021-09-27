@@ -28,12 +28,18 @@ class newsletterseeder_table_seeder extends Seeder
             $authorListId[]=$author->id;
         }
         //Tags
+        $listOfTags = [
+            'sport',
+            'world',
+            'cronaca'
+        ];
+
         $listOfTagID = [];
 
-        for ($i=0;  $i< 10; $i++ ) {
+        foreach($listOfTags as $tagName) {
 
             $tagObject = new Tag (); 
-            $tagObject->name = $faker->word(); 
+            $tagObject->name = $tagName; 
             $tagObject->save(); 
             $listOfTagID[] = $tagObject->id; 
         } 

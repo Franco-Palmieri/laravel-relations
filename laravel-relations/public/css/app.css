@@ -10942,6 +10942,10 @@ a.text-dark:focus {
   }
 }
 
+header {
+  background-color: #94ddff;
+}
+
 header .container .row .title {
   text-align: center;
   padding: 20px;
@@ -10988,8 +10992,12 @@ header .container .row .nav-bar .nav-rigth li {
 
 .news-box {
   align-items: center;
-  padding: 10px;
-  border-top: 1px solid #ebebeb;
+  padding: 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.news-box .news-title {
+  font-weight: bold;
 }
 
 .show-box .show-img {
@@ -11005,6 +11013,10 @@ header .container .row .nav-bar .nav-rigth li {
 .show-box .show-info a {
   text-decoration: none;
   color: black;
+}
+
+.show-box .show-info .show-title {
+  font-weight: bold;
 }
 
 .chip {
@@ -11023,10 +11035,12 @@ header .container .row .nav-bar .nav-rigth li {
 }
 
 .contenitore-base {
-  background-color: #a2e5ff;
+  background-color: white;
 }
 
-.news-card {
-  margin: 20px 0;
+.news-container {
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  padding: 10px;
 }
 

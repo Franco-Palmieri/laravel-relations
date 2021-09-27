@@ -1,7 +1,10 @@
 .news-box{
     align-items: center;
-    padding: 10px;
-    border-top: 1px solid rgb(235, 235, 235);
+    padding: 20px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    .news-title{
+        font-weight: bold;
+    }
 }
 .show-box{
     .show-img{
@@ -14,6 +17,9 @@
         a{
             text-decoration: none;
             color: black;
+        }
+        .show-title{
+            font-weight: bold;
         }
     }
 }

@@ -11,6 +11,7 @@
                 <div class="col-12 show-info">
                     <h5 class="show-title">{{$article->title}}</h5>
                     <p class="show-text">{{$article->body}}</p>
+                    <p>{{$article->author->name}}</p>
                     @foreach($article->tags as $tag)
                     <a href="{{route('tag.show', $tag->id)}}">
                         <div class="chip">
