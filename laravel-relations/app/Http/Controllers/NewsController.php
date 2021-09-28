@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Author;
 use App\Tag;
-
+use App\Mail\NewArticleCreate;
+use Illuminate\Support\Facades\Mail;
 class NewsController extends Controller
 {
     /**
@@ -48,6 +49,9 @@ class NewsController extends Controller
 
         $article = new Article();
         $this->saveAndFill($article, $data);
+
+        //dopo che ho salvato invio mail
+        Mail::to('info@test.it')->send(new NewArticleCreate());
 
         return redirect()->route('articles.show', $article->id);
     }
