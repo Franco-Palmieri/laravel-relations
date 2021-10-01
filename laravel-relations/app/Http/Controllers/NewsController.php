@@ -51,7 +51,7 @@ class NewsController extends Controller
         $this->saveAndFill($article, $data);
 
         //dopo che ho salvato invio mail
-        Mail::to('info@test.it')->send(new NewArticleCreate());
+        Mail::to('info@info.it')->send(new NewArticleCreate());
 
         return redirect()->route('articles.show', $article->id);
     }
